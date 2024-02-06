@@ -1,0 +1,12 @@
+
+/.venv
+# Ignore virtual environment
+
+
+# Ignore Django generated files
+*.pyc
+*.pyo
+__pycache__
+
+# Ignore the environment variable file
+.env
