@@ -27,8 +27,8 @@ def criar_conta(request):
 
 
         if perfil.is_valid() and user.is_valid():
-            try:
-                with transaction.atomic():
+           
+               
                     usr = User.objects.create_user(
                         first_name=user.cleaned_data['first_name'],
                         last_name=user.cleaned_data['last_name'],
@@ -43,9 +43,8 @@ def criar_conta(request):
                     perl.save()
 
                     return redirect('login')
-            except IntegrityError:
-               
-                return render(request, 'contas/criar_conta.html', {'form': user_form, 'form_perfil': perfil_form})
+            
+            
         else:
             return render(request, 'contas/criar_conta.html', {'form': user, 'form_perfil': perfil})
     else:
@@ -59,7 +58,8 @@ def htmx_valida_username(request):
 
     if len(usernameParam) < 5:
         return HttpResponse('<label style="color: red">Username deve ter no mínimo 5 caracteres</label>')
-    if not User.objects.filter(username=usernameParam):
+    
+    elif not User.objects.filter(username=usernameParam):
         context['error_usrname'] = 'Username disponível'
         context['cor'] = 'green'
 
@@ -92,12 +92,16 @@ def htmx_valida_email(request):
 
     if not validou_email(email):
         context['usr_email'] = 'Email inválido.'
+        
+    
     if User.objects.filter(email=email):
         context['usr_email'] = 'Email já cadastrado.'
+        
         return HttpResponse('<label style="color: red">Email já cadastrado.</label>')
-    if PerfilForm(request.POST).is_valid():
-        context['usr_email'] = ''
-        context['st_submit'] = ''
+    else:
+        if PerfilForm(request.POST).is_valid():
+            context['usr_email'] = ''
+            context['st_submit'] = ''
 
     str_template = render_to_string('contas/feedback_form_validation.html', context)
     return HttpResponse(str_template)

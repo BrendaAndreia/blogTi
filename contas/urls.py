@@ -10,8 +10,9 @@ urlpatterns = [
 
 htmx_urlpatterns = [
     path('criar_conta/htmx_valida_username', views.htmx_valida_username, name='htmx_valida_username'),
-    path('criar_conta/htmx_valida_senha', views.htmx_valida_senha, name='htmx_valida_senha'),
     path('criar_conta/htmx_valida_email', views.htmx_valida_email, name='htmx_valida_email'),
+    path('criar_conta/htmx_valida_senha', views.htmx_valida_senha, name='htmx_valida_senha'),
+    
 ]
 
 urlpatterns += htmx_urlpatterns
