@@ -82,7 +82,7 @@
 
                             <!--region Password-->
                             <div class="col-sm-6">
-                                <label for="{{ form.email.id_for_label }}" class="form-label">{{ form.password.label }}</label>
+                                <label for="{{ form.password.id_for_label }}" class="form-label">{{ form.password.label }}</label>
                                 {% render_field form.password hx-post="criar_conta/htmx_valida_senha" hx-target="#error_pwd" hx-trigger="keyup" %}
                             </div>
 
