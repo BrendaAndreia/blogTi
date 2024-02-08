@@ -24,6 +24,13 @@ def processa_login(request):
     return render(request, 'autenticacao/login.html')
 
 def processa_logout(request):
+    
+    storage = messages.get_messages(request)
+    
+    for message in storage:
+        pass
+    
+    
     logout(request)
     return redirect('login')
 
