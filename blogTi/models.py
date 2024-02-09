@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
+
 class Post(models.Model):
     autor = models.CharField(max_length=255)
     titulo = models.CharField(max_length=255)

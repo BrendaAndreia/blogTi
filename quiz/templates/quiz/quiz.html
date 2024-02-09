@@ -1,0 +1,47 @@
+{% load static %}
+
+
+<div class="card vh-75 vw-100">
+    {% if questao.imagem %}
+    <img src="{{ questao.imagem.url }}" class="card-img-top" alt="texto-questao">
+    {% else %}
+    <img src="{% static 'blog/icon.png' %}"
+    class="card-img-top"
+    alt="texto-questao">
+    {% endif %}
+    
+    <p class="mt-1 p-3 ">
+        {{questao.enunciado}}
+    </p>
+    <form method="POST" action="{% url 'resposta' %}">
+        {% csrf_token %}
+        <div class="card-body">
+
+            <div class="form-check">
+                <ul class="list-group list-group-flush">
+                    {% for alternativa in questao.alternativa_set.all %}
+
+                        <div class="list-group-item">
+                            <input class="form-check-input"
+                            type="radio"
+                            name="resposta"
+                            id="id_{{ alternativa.id }}"
+                            value="{{ alternativa.isCorreta }}">
+                            <label class="form-check-label mb-3" for="id_{{ alternativa.id }}">
+                            Alternativa {{alternativa.texto}}
+                            </label>
+                        </div>
+                    {% endfor %}
+                </ul>
+                <a href="#" class="btn btn-outline-success mt-2 d-grid" hx-post="{% url 'resposta' %}"
+                hx-target="#msg_feedback"
+                hx-trigger="click">Responder</a>
+            </div>
+        </div>
+    </form>
+    <div class="card-footer footer-botom bg-white border-0">
+        <div class="text fs-5 fw-bold">
+            <div class="text-center" id="msg_feedback"></div>
+        </div>
+    </div>
+</div>
