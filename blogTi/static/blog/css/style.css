@@ -5,7 +5,11 @@
 --pink: #ffafccff;
 --pastel-blue: #bde0feff;
 --light-purple: #cdb4dbff;
+}
 
+.border-pink{
+    border-right: 1px solid var(--ligth-pink);
+    border-left: 1px solid var(--ligth-pink);
 }
 .img-350{
    

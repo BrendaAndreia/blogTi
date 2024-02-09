@@ -2,10 +2,10 @@ from django.db import models
 
 CHOICES_ASSUNTOS =[
     ('', 'Selecione o assunto'),
-    ('dúvida', 'Dúvida'),
-    ('sugestão', 'Sugestão'),
-    ('reclamação', 'Reclamação'),
-    ('outros', 'Outros'),
+    ('Dúvida', 'Dúvida'),
+    ('Sugestão', 'Sugestão'),
+    ('Reclamação', 'Reclamação'),
+    ('Outros', 'Outros'),
 ]
 # Create your models here.
 class Contato(models.Model):

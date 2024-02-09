@@ -20,7 +20,7 @@ def processa_contato(request):
 
         if contato.is_valid():
             try:
-                #enviar_email(contato)
+                enviar_email(contato)
                 enviar_email_com_template(contato)
                 obj_contato = contato.save()
                 obj_contato.save()
@@ -48,22 +48,20 @@ def enviar_email(contato):
 # este método faz encaminhamento de email utilizando templates html para formatar o corpo do email.
 def enviar_email_com_template(contato):
 
-    # transformando conteúdo html em string
+ 
     html_content = render_to_string('email_templates/confirmacao_mensagem.html',
                                     {'nome': contato.cleaned_data['nome'],
                                      'assunto': contato.cleaned_data['assunto']})
 
-    # removendo tags html do conteúdo de email
+   
     text_content = strip_tags(html_content)
 
-    # montando o email
+ 
     msg = EmailMultiAlternatives(contato.cleaned_data['assunto'],
                                  text_content,
                                  settings.EMAIL_HOST_USER,
                                  [contato.cleaned_data['email']])
 
-    # anexando código html/template ao email
     msg.attach_alternative(html_content, "text/html")
 
-    # enviando o email
     msg.send()

@@ -1,36 +1,9 @@
-<!DOCTYPE html>
+{% extends "blog_base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/05ee282f89.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-        <title>Blog Ti</title>
-    </head>
-</head>
-<body>
 
-    <div class="container-fluid bg-black mb-2">
-        <div class="row justify-content-center">
-            <div class="col-xl-8">
-                <header class="bg-dark my-2">
-                    
-                    {% include 'fragments/navbar.html' %}
-                    
-                </header>
-            </div>
-        </div>
-    </div>
-   
-
-    <main class="bg-light">
-        <div class="container-fluid ">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 ">
-                    
+{% block title %} Blog da Bê {% endblock %}
+{% block content %}           
+  <div class="col-xl-6">
                     {% for post in posts  %}
                     <div class="card mx-5 px-5 py-2">
                         <a href="{% url 'post_detail' post.id %}">
@@ -63,8 +36,6 @@
                 </div>
             </div>
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-</body>
-</html>
+    </div>
+</div>
+    {% endblock %}
