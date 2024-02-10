@@ -1,35 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Shadows+Into+Light+Two&display=swap');
+
 :root{
-
---ligth-pink: #ffc8ddff;
---light-blue: #a2d2ffff;
---pink: #ffafccff;
---pastel-blue: #bde0feff;
---light-purple: #e4caf3;
---text-light:#fff;
-
+    --peach-pink-soft: #DF9FA5;
+    --neutral-gray: #D4D4D4;
+    --misty-white: #EAEAEA;
+    --soft-red: #D48087;
+    --love-red: #C65D66;
+    --light-gray: #DBDBDB;
 }
 /*classes variaveis*/
 .border-pink{
-    border-right: 1px solid var(--ligth-pink);
-    border-left: 1px solid var(--ligth-pink);
+    border-right: 1px solid var(--soft-red);
+    border-left: 1px solid var(--soft-red);
 }
-.bg-light-pink{
-    background-color: var(--ligth-pink);
+.bg-light{
+    background-color: var(--misty-white) !important;
 }
-.bg-pastel-blue{
-    background-color: var(--pastel-blue);
+.bg-pink{
+    background-color: var(--peach-pink-soft) !important;
 }
-.bg-light-purple{
-    background-color: var(--light-purple);
-}
-.text-light{
-    color: var(--text-light);
-}
-.text-blue{
-    color: var(--light-blue);
+.text-misty-white{
+    color: var(--misty-white) !important;
 }
 .text-pink{
-    color: var(--pink);
+    color: var(--soft-red) !important;
 }
 /*global*/
 *{
@@ -38,19 +32,16 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--misty-white);
 }
 a{
     text-decoration: none;
-    color: var(--text-light) !important;
+    color:var(--light-gray) !important
 }
-a:hover{
-    text-decoration: none;
-    color: var(--pastel-blue) !important;
-}
+
 
 .img-350{
    height:350px;
@@ -61,14 +52,54 @@ a:hover{
 }
 
 /*navbar*/
-
+.navbar a{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 22px;
+}
+.navbar a:hover{
+    text-decoration: none;
+    color: #000 !important;
+}
 .btn-outline-search{
-    border-color: var(--light-blue);
-    color: var(--text-light);
-    font-weight: 700;
+    border-color: var(--light-gray);
+    color: var(--light-gray) !important;
+    font-weight: 700;    
 }
 .btn-outline-search:hover{
-    background-color: var(--light-blue);
-    color: var(--text-light);
-    border-color: var(--light-blue);
+    border-color: #000!important;
+    color: #000 !important;
+}
+.btn-outline-responder{
+    border-color: var(--soft-red);
+    color: var(--soft-red) !important;
+    font-weight: 700;    
+}
+.btn-outline-responder:hover{
+    border-color:var(--love-red) !important;
+}
+/*cards*/
+
+.card{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: var(--misty-white);
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-title{
+    color: var(--soft-red);
+    font-size: 30px;
+}
+.resumo{
+    color: #000;
+}
+
+/*quiz*/
+
+.list-group-item{
+
+    background-color: var(--bg-light);
 }

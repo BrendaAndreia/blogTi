@@ -2,7 +2,7 @@
 
 
 {% block btn_salvar_editar_comentario %}
-    <button class="btn btn-success"
+    <button class="btn btn-outline-responder"
         hx-post="{% url 'editar_comentario_htmx' comentario.id %}"
         hx-trigger="click"
         onclick="closeModal()">

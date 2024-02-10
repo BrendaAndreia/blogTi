@@ -7,7 +7,7 @@
                     <h5 class="modal-title">
                         <div class="d-flex">
                             <div class="text-secondary me-1">Comentando o post</div>
-                            <div class="text-primary">{{ post.titulo }} </div>
+                            <div class="text-pink">{{ post.titulo }} </div>
                         </div>
                     </h5>
                 </div>
@@ -31,7 +31,7 @@
                         Cancelar
                     </button>
                     {% block btn_salvar_editar_comentario %}
-                        <button class="btn btn-success"
+                        <button class="btn btn-outline-responder"
                                 hx-post="{% url 'comentarios' post.id %}"
                                 hx-trigger="click"
                                 onclick="closeModal()">

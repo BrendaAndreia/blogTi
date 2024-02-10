@@ -33,13 +33,13 @@
                         </div>
                     {% endfor %}
                 </ul>
-                <a href="#" class="btn btn-outline-success mt-2 d-grid" hx-post="{% url 'resposta' %}"
+                <a href="#" class="btn btn-outline-responder mt-2 d-grid" hx-post="{% url 'resposta' %}"
                 hx-target="#msg_feedback"
                 hx-trigger="click">Responder</a>
             </div>
         </div>
     </form>
-    <div class="card-footer footer-botom bg-white border-0">
+    <div class="card-footer footer-bottom border-0">
         <div class="text fs-5 fw-bold">
             <div class="text-center" id="msg_feedback"></div>
         </div>

@@ -3,9 +3,9 @@
         <img src="{{ post.image_capa.url }}" class="card-img-top img-350" alt="...">
     </a>
     <div class="card-body pb-3">
-        <a href="{% url 'post_detail' post.id %}" class="text-decoration-none text-black"><h5 class="card-title">{{post.titulo}}</h5></a>
+        <a href="{% url 'post_detail' post.id %}" class="text-black"><h5 class="card-title">{{post.titulo}}</h5></a>
   
-      <p class="card-text">{{post.topico_set.first.conteudo|slice:':250'|safe}}...</p>
+      <p class="card-text"> <h6 class="resumo">{{post.topico_set.first.conteudo|slice:':250'|safe}}...</h6></p>
       
       <p class="card-text">
         <small class="text-muted d-flex justify-content-end">{{post.data_publicacao}}</small>
@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-center">
-                    <div class="span me-2 btn">Curtir  <i class="fa-solid fa-heart"></i></div>
+                    <!--<div class="span me-2 btn">Curtir <i class="fa-solid fa-heart"></i></div>-->
                     {% include 'social/btn_comentar_htmx.html' %}
-                    <div class="span me-2 btn">Compartilhar<i class="fa-solid fa-share"></i></div>
+                    <div class="span me-2 btn">Compartilhar <i class="fa-solid fa-share"></i></div>
                    
                 </div>
             </div>

@@ -32,10 +32,10 @@
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 
-   <div class="container-fluid mb-2 bg-light-purple">
+   <div class="container-fluid mb-2 bg-pink">
         <div class="row justify-content-center">
             <div class="col-xl-8">
-                <header class="my-2 bg-light-purple">
+                <header class="my-2 bg-pink">
                     {% block navbar %}
                     {% endblock %}
                     {% block carousel %}
@@ -56,7 +56,7 @@
             
         </div>   
     </main>
-    <footer class="footer-bottom bg-light-purple mt-2">
+    <footer class="footer-bottom bg-pink mt-2">
         {% block footer %} {% endblock %}
     </footer>
  
