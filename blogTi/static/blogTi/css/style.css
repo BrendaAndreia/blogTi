@@ -1,0 +1,74 @@
+:root{
+
+--ligth-pink: #ffc8ddff;
+--light-blue: #a2d2ffff;
+--pink: #ffafccff;
+--pastel-blue: #bde0feff;
+--light-purple: #e4caf3;
+--text-light:#fff;
+
+}
+/*classes variaveis*/
+.border-pink{
+    border-right: 1px solid var(--ligth-pink);
+    border-left: 1px solid var(--ligth-pink);
+}
+.bg-light-pink{
+    background-color: var(--ligth-pink);
+}
+.bg-pastel-blue{
+    background-color: var(--pastel-blue);
+}
+.bg-light-purple{
+    background-color: var(--light-purple);
+}
+.text-light{
+    color: var(--text-light);
+}
+.text-blue{
+    color: var(--light-blue);
+}
+.text-pink{
+    color: var(--pink);
+}
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: var(--text-light) !important;
+}
+a:hover{
+    text-decoration: none;
+    color: var(--pastel-blue) !important;
+}
+
+.img-350{
+   height:350px;
+}
+.avatar{
+    width: 85px;
+    height: 85px;
+}
+
+/*navbar*/
+
+.btn-outline-search{
+    border-color: var(--light-blue);
+    color: var(--text-light);
+    font-weight: 700;
+}
+.btn-outline-search:hover{
+    background-color: var(--light-blue);
+    color: var(--text-light);
+    border-color: var(--light-blue);
+}
