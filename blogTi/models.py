@@ -10,6 +10,7 @@ class Post(models.Model):
     subtitle = models.CharField(max_length=255)
     image_capa = models.ImageField(upload_to='static/blog/%Y/%m/%d/', blank=True, null=True)
     data_publicacao = models.DateTimeField(default=datetime.now())
+    tempo_leitura = models.CharField(default=30, max_length=2)
 
 
     def __str__(self):
@@ -18,6 +19,9 @@ class Post(models.Model):
 class Topico(models.Model):
     conteudo = RichTextUploadingField(blank=True, null=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.conteudo
     
 class Tag(models.Model):
     nome = models.CharField(max_length=50)

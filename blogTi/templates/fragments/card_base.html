@@ -14,12 +14,15 @@
             <div class="col-12">
                 <div class="d-flex justify-content-center">
                     <div class="span me-2 btn">Curtir  <i class="fa-solid fa-heart"></i></div>
-                    <div class="span me-2 btn">Comentar  <i class="fa-solid fa-comment"></i></div>
-                    <div class="span me-2 btn">Compartilhar  <i class="fa-solid fa-share"></i></div>
+                    {% include 'social/btn_comentar_htmx.html' %}
+                    <div class="span me-2 btn">Compartilhar<i class="fa-solid fa-share"></i></div>
                    
                 </div>
             </div>
         </div>
     </div>
-  </div>
+</div>
+
+<div id="modals-here"></div>
+
 </div>

@@ -10,7 +10,7 @@ class Perfil(models.Model):
     foto = models.ImageField(blank=True, null=True, default='', upload_to='contas/imagens')
 
     def __str__(self):
-        return self.user.username
+        return self.user.first_name + ' ' + self.user.last_name
 
 @receiver(post_save, sender=User)
 def criar_perfil_usuario(sender, instance, created, **kwargs):

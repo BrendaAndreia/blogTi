@@ -14,8 +14,23 @@
         {% if title %}{{ title }} | Blog da Bê{% else %}Blog da Bê |{% endif %}
     {% endblock %}
      </title>
+     <script>
+        function closeModal() {
+	var container = document.getElementById("modals-here")
+	var backdrop = document.getElementById("modal-backdrop")
+	var modal = document.getElementById("modal")
+
+	modal.classList.remove("show")
+	backdrop.classList.remove("show")
+
+	setTimeout(function() {
+		container.removeChild(backdrop)
+		container.removeChild(modal)
+	}, 200)
+}
+    </script>
 </head>
-<body>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 
    <div class="container-fluid bg-dark mb-2">
         <div class="row justify-content-center">
