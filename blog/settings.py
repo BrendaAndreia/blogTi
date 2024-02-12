@@ -92,10 +92,10 @@ LOGOUT_REDIRECT_URL = 'login'
 DATABASES = {
    'default': {
    'ENGINE': 'django.db.backends.postgresql',
-          'NAME': 'blog',
-          'USER': 'postgres',
-          'PASSWORD': '1004',
-          'HOST': '127.0.0.1',
+          'NAME': 'blog_k1qk',
+          'USER': 'blog_k1qk_user',
+          'PASSWORD': 'Er7tR4RfOb0KO0nUoKvcnulkLANiTHc3',
+          'HOST': 'dpg-cn4n0len7f5s7393befg-a.oregon-postgres.render.com',
           'PORT': '5432',
           'OPTIONS': {
                     'options': '-c search_path=blog_db'
