@@ -3,33 +3,9 @@
 
 {% block title %} Blog da Bê {% endblock %}
 {% block content %}           
-  <div class="col-xl-6">
+  <div class="col-xl-6  mx-5 px-5 py-2">
                     {% for post in posts  %}
-                    <div class="card mx-5 px-5 py-2">
-                        <a href="{% url 'post_detail' post.id %}">
-                            <img src="{{ post.image_capa.url }}" class="card-img-top img-350" alt="...">
-                        </a>
-                        <div class="card-body pb-3">
-                            <a href="{% url 'post_detail' post.id %}" class="text-decoration-none text-black"><h5 class="card-title">{{post.titulo}}</h5></a>
-                      
-                          <p class="card-text">{{post.topico_set.first.conteudo|slice:':250'|safe}}...</p>
-                          
-                          <p class="card-text">
-                            <small class="text-muted d-flex justify-content-end">{{post.data_publicacao}}</small>
-                          </p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-center">
-                                        <div class="span me-2 btn">Curtir  <i class="fa-solid fa-heart"></i></div>
-                                        <div class="span me-2 btn">Comentar  <i class="fa-solid fa-comment"></i></div>
-                                        <div class="span me-2 btn">Compartilhar  <i class="fa-solid fa-share"></i></div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-
+                    {% include 'fragments/card_base.html' with post=post %}
                       <div class="my-3"></div>
 
                     {% endfor %}
