@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Shadows+Into+Light+Two&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 :root{
     --peach-pink-soft: #DF9FA5;
     --neutral-gray: #D4D4D4;
@@ -36,6 +36,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: var(--misty-white);
+    font-family: 'Quicksand', sans-serif;
 }
 a{
     text-decoration: none;
@@ -56,14 +57,16 @@ a{
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 22px;
 }
-.navbar a:hover{
+
+a:hover{
     text-decoration: none;
     color: #000 !important;
 }
 .btn-outline-search{
     border-color: var(--light-gray);
     color: var(--light-gray) !important;
-    font-weight: 700;    
+    font-weight: 700; 
+    font-family: 'Shadows Into Light Two', cursive;   
 }
 .btn-outline-search:hover{
     border-color: #000!important;
@@ -72,7 +75,8 @@ a{
 .btn-outline-responder{
     border-color: var(--soft-red);
     color: var(--soft-red) !important;
-    font-weight: 700;    
+    font-weight: 700;  
+    font-family: Quicksand, sans-serif;
 }
 .btn-outline-responder:hover{
     border-color:var(--love-red) !important;
@@ -93,10 +97,16 @@ a{
     color: var(--soft-red);
     font-size: 30px;
 }
-.resumo{
+.resumo, article{
     color: #000;
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
 }
 
+.post-titulo{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 26px;
+}
 /*quiz*/
 
 .list-group-item{
