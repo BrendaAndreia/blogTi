@@ -49,12 +49,18 @@
                             <div class="row g-0">
 
                                 <!-- COLUNA DO AVATAR -->
+                                {% if comentario.perfil.foto %}
                                 <div class="col-md-1">
                                     <img src="{{ comentario.perfil.foto.url }}"
                                          style="height:35px; width: 35px"
                                          class="rounded-circle mt-3 ms-2">
                                 </div>
-
+                                {% else %}
+                            <!-- Trate o caso em que não há foto associada -->
+                            <div class="col-md-1">
+                                
+                            </div>
+                            {% endif %}
                                 <!-- COLUNA DO CONTEÚDO -->
                                 <div class="col-md-9">
                                     <div class="card-body">
