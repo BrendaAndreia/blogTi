@@ -1,4 +1,5 @@
 <div class="card">
+    {% if post.id %}
     <a href="{% url 'post_detail' post.id %}">
         <img src="{{ post.image_capa.url }}" class="card-img-top img-350" alt="...">
     </a>
@@ -21,6 +22,10 @@
             </div>
         </div>
     </div>
+    {% else %}
+        <!-- Trate o caso em que o ID do post está vazio -->
+        <p>Erro: ID do post está vazio.</p>
+    {% endif %}
 </div>
 
 <div id="modals-here"></div>
