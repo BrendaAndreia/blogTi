@@ -94,10 +94,10 @@ LOGOUT_REDIRECT_URL = 'login'
 DATABASES = {
    'default': {
    'ENGINE': 'django.db.backends.postgresql',
-          'NAME': 'dea35b5u0f464d',
-          'USER': 'sseirxyoukeosy',
-          'PASSWORD': '5620800eeebac8b515f08df45cded46ec90a46a4b7e48c2f41e7d77649f0b693',
-          'HOST': 'ec2-34-236-199-229.compute-1.amazonaws.com',
+          'NAME': 'dc28e69v6fdemu',
+          'USER': 'ejgsnubywnehpw',
+          'PASSWORD': '825163156b52a8973126bfc208fe561022db2fe62cb2e54ba4fa521b48186a1d',
+          'HOST': 'ec2-3-232-62-229.compute-1.amazonaws.com',
           'PORT': '5432',
           'OPTIONS': {
                     'options': '-c search_path=public'
