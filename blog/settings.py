@@ -1,6 +1,8 @@
 from pathlib import Path
 
 import os
+import django_heroku
+import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -92,10 +94,10 @@ LOGOUT_REDIRECT_URL = 'login'
 DATABASES = {
    'default': {
    'ENGINE': 'django.db.backends.postgresql',
-          'NAME': 'blog_k1qk',
-          'USER': 'blog_k1qk_user',
-          'PASSWORD': 'Er7tR4RfOb0KO0nUoKvcnulkLANiTHc3',
-          'HOST': 'dpg-cn4n0len7f5s7393befg-a.oregon-postgres.render.com',
+          'NAME': 'blog',
+          'USER': 'postrgres',
+          'PASSWORD': '1004',
+          'HOST': '127.0.0.1',
           'PORT': '5432',
           'OPTIONS': {
                     'options': '-c search_path=blog_db'
@@ -167,3 +169,5 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'default from email'
 
 SITE_ID = 1
+
+django_heroku.settings(locals())
