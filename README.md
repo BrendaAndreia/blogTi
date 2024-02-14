@@ -1,6 +1,8 @@
 # Blog Django
 
-Este é um projeto de blog desenvolvido em Django, que inclui diversas funcionalidades. 
+Este é um projeto de blog desenvolvido em Django, que inclui diversas funcionalidades.
+Banco de dados: Postgres
+Bucket: google cloud. 
 
 ## Funcionalidades
 
@@ -54,4 +56,4 @@ Inicie o servidor:
 python manage.py runserver
 ```
 ## Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema, enviar um pull request, ou mesmo tirar uma dúvida. 
