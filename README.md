@@ -23,7 +23,11 @@ Este é um projeto de blog desenvolvido em Django, que inclui diversas funcional
 5. **Posts:**
    - Os usuários podem criar, editar e excluir postagens.
    - A interface do administrador do Django é utilizada para gerenciar as postagens.
-
+     
+5. **Comentários:**
+   - Os usuários podem criar, editar e excluir comentários.
+   - Essa funcionalidade ainda está em andamento. (vocÊ provavelmente encontrará erros)
+     
 ## Modelo de Entidade-Relacionamento (MER)
 
 Diagrama de Modelo de Entidade-Relacionamento (MER) do projeto.
