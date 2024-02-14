@@ -28,7 +28,7 @@ Este é um projeto de blog desenvolvido em Django, que inclui diversas funcional
 
 Inclua abaixo o Diagrama de Modelo de Entidade-Relacionamento (MER) do seu projeto.
 
-![Diagrama MER]([caminho/para/imagem/mer.png](https://raw.githubusercontent.com/BrendaAndreia/blogTi/main/MER.jpg))
+![Diagrama MER]((https://raw.githubusercontent.com/BrendaAndreia/blogTi/main/MER.jpg))
 
 ## Pré-requisitos
 
@@ -36,7 +36,7 @@ Certifique-se de ter o Python e o Django instalados em sua máquina antes de com
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## Configuração
 Clone o repositório
 
@@ -45,9 +45,10 @@ Configure as variáveis de ambiente para as chaves secretas, informações de au
 Execute as migrações:
 ```bash
 python manage.py migrate
+```
 Inicie o servidor:
 ```bash
 python manage.py runserver
-
+```
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar um pull request.
