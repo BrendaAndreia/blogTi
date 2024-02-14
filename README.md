@@ -27,7 +27,7 @@ Este é um projeto de blog desenvolvido em Django, que inclui diversas funcional
 ## Modelo de Entidade-Relacionamento (MER)
 
 Diagrama de Modelo de Entidade-Relacionamento (MER) do projeto.
-[https://raw.githubusercontent.com/BrendaAndreia/blogTi/main/MER.jpg]
+![Diagrama MER](https://github.com/BrendaAndreia/blogTi/blob/main/MER.jpg?raw=true)
 
 ## Pré-requisitos
 
