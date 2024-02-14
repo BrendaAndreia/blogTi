@@ -140,11 +140,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-#STATIC_URL = 'static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 #MEDIA_URL = '/image/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+#storage google
+
+from google.oauth2 import service_account
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(os.path.join(BASE_DIR, 'credential.json'))
+
+DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
+GS_PROJECT_ID = 'blog'
+GS_BUCKET_NAME = 'blogbe_bucket'
+MEDIA_ROOT = 'media/'
+UPLOAD_ROOT = 'media/uploads/'
+MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles')
