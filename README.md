@@ -2,7 +2,7 @@
 
 Este é um projeto de blog desenvolvido em Django, que inclui diversas funcionalidades.
 ### Banco de dados: Postgres
-### Bucket: google cloud. 
+### Bucket: Google Cloud. 
 
 ## Funcionalidades
 
